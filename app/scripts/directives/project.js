@@ -19,19 +19,18 @@ angular.module('lelylan-lab.directives.project.directive').directive('lyProject'
     restrict: 'EA',
     replace: true,
     template: '' +
-      '<ul class="item-card">' +
-        '<li class="item-card list-item">' +
-        '<div class="item-cardFront">' +
-          '<a href="{{project.link}}" target="_blank"><img class="user-avatar" src="{{project.image}}"/></a>' +
-          '<h1 class="title"><a href="{{project.link}}" target="_blank">{{project.name}}</a></h1>' +
-          '<p class="tags">' +
-          '<a class="tag" ng-repeat="tag in project.tags" href="#projects/{{tag}}">{{tag}}</a>' +
+      '<div class="ly-project ly-project-item-card">' +
+        '<div class="ly-project-item-card ly-project-list-item">' +
+          '<a href="{{project.link}}" target="_blank"><img class="ly-project-user-avatar" src="{{project.image}}"/></a>' +
+          '<h1 class="ly-project-title"><a href="{{project.link}}" target="_blank">{{project.name}}</a></h1>' +
+          '<p class="ly-project-tags">' +
+          '<a class="ly-project-tag" ng-repeat="tag in project.tags" href="http://localhost:9000#projects/{{tag}}" target="_blank">{{tag}}</a>' +
           '</p>' +
-          '<p class="description">{{project.description}}</p>' +
-          '<p class="link" ><i class="fa fa-external-link"></i> <a href="{{project.link}}" target="_blank">Learn how to make it yourself</a></p>' +
-      '</div>' +
-      '</li>' +
-      '</ul>',
+          '<p class="ly-project-description">{{project.description}}</p>' +
+          '<p class="ly-project-link"><a href="{{project.link}}" target="_blank">Learn more about this project &rarr;</a></p>' +
+          '<p class="ly-project-link ly-project-footer"><a href="http://lelylan.com" target="_blank">With &hearts; from lelylan.com</a></p>' +
+        '</div>' +
+      '</div>',
     scope: { lyProjectId: '@' }
   };
 

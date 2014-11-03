@@ -32,3 +32,6 @@ coverage/
 
 # Test page
 index-test.html
+
+# Build folder
+dist/
