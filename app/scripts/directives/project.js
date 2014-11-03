@@ -28,7 +28,8 @@ angular.module('lelylan-lab.directives.project.directive').directive('lyProject'
           '</p>' +
           '<p class="ly-project-description">{{project.description}}</p>' +
           '<p class="ly-project-link"><a href="{{project.link}}" target="_blank">Learn more about this project &rarr;</a></p>' +
-          '<p class="ly-project-link ly-project-footer"><a href="http://lelylan.com" target="_blank">With &hearts; from lelylan.com</a></p>' +
+          '<p class="ly-project-link ly-project-footer" ng-click="embed=true" ng-show="!embed"><a class="ly-project-embed"><span>&rarrlp;</span> embed</a> <a href="http://lelylan.com" target="_blank">With &hearts; lelylan.com</a></p>' +
+          '<p class="ly-project-embed-input ly-project-link ly-project-footer" ng-show="embed"><input type="text" value=""></input></p>' +
         '</div>' +
       '</div>',
     scope: { lyProjectId: '@' }
