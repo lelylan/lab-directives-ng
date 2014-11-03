@@ -13,10 +13,15 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="dist/styles/main.css">
   </head>
-  <body ng-app="app">
-    <ly-project ly-project-id="5457a05d386166000e010000"></ly-project>
-    <script src="dist/scripts/vendor.js"></script>
-    <script src="dist/scripts/scripts.js"></script>
-    <script>var app = angular.module('app', ['lelylan-lab.directives.project']);</script>
-</body>
+
+  <!--<body ng-app="app">-->
+    <!--<ly-project ly-project-id="5457a05d386166000e010000"></ly-project>-->
+    <!--<script src="dist/scripts/vendor.js"></script>-->
+    <!--<script src="dist/scripts/scripts.js"></script>-->
+    <!--<script>var app = angular.module('app', ['lelylan-lab.directives.project']);</script>-->
+  <!--</body>-->
+
+  <body>
+  <div ng-app="project-app"><ly-project ly-project-id="5457a05d386166000e010000"></ly-project><link rel="stylesheet" href="http://lelylan.github.io/lab-directives-ng/styles/main.css"><script src="http://lelylan.github.io/lab-directives-ng/scripts/vendor.js"></script><script src="http://lelylan.github.io/lab-directives-ng/scripts/scripts.js"></script><script>angular.module('project-app', ['lelylan-lab.directives.project']);</script></div>
+  </body>
 </html>
