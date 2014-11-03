@@ -37,14 +37,11 @@ angular.module('lelylan-lab.directives.project.directive').directive('lyProject'
 
   definition.link = function(scope, element, attrs) {
 
-    console.log("ENTERING");
-
     // active view
     scope.view = { path: '/loading' }
 
     // watches the project ID to gets the project representation
     scope.$watch('lyProjectId', function(id) {
-      console.log("PROJECT", id);
 
       if (id) {
         Project.find(id).
